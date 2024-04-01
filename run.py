@@ -1,6 +1,9 @@
 import random
 
 def play_game():
+    """
+    Function to manage the game
+    """
     while True:
         print("Welcome to this Madlibs game! You'll play small madlibs that will turn into one funny story.")
         play = input("Let's play, shall we? 'yes'/'no' \n")
@@ -12,11 +15,11 @@ def play_game():
             for game in games:
                 result = game()
                 if game == game1:
-                    results.insert(0, result)  # Insert result1 at the beginning of the list
+                    results.insert(0, result)  # First on the summarized result list
                 elif game == game2:
-                    results.insert(1, result)  # Insert result2 after result1
+                    results.insert(1, result)  # Second on the summarized result list
                 else:
-                    results.insert(2, result)  # Insert result3 after result2
+                    results.insert(2, result)  # Third on the summarized result list
             game_summary(results)
             break  # Exit the loop after playing the game
         elif play.lower() == "no":
@@ -27,6 +30,9 @@ def play_game():
 
 # First inputs for the user 
 def game1():
+    """
+    Function to create the first madlibs story with the users input
+    """
     month = input("Enter a month: ")
     name1 = input("Enter your name: ")
     name2 = input("Enter another name: ")
@@ -39,6 +45,9 @@ def game1():
 
 # Second madlibs
 def game2():
+    """
+    Function to create the second madlibs story with the users input
+    """
     # Second inputs for user
     name3 = input("Enter a friends name: ")
     store_name = input("Enter a store name: ")
@@ -51,6 +60,9 @@ def game2():
 
 # Third madlibs
 def game3():
+    """
+    Function to create the third madlibs story with the users input
+    """
     #Third inputs for user
     positive_feeling = input("Enter a positive feeling: ")
     artist = input("Enter an artist: ")
@@ -60,6 +72,9 @@ def game3():
     return result3
 
 def game_summary(results):
+    """
+    Function to summarize all madlibs results 
+    """
     print("Good Job, let's put them together in the right order: \n")
     # Print the results
     for result in results:
