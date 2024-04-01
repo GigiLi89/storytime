@@ -1,25 +1,29 @@
 import random
 
 def play_game():
-    print("Welcome to this Madlibs game")
-    play = input("Let's play, shall we? yes/no \n")
-    if play.lower() == "yes":
-        print("Alright, let's get started! \n")
-        results = []
-        games = [game1, game2, game3]
-        random.shuffle(games)
-        for game in games:
-            result = game()
-            if game == game1:
-                results.insert(0, result)  # Insert result1 at the beginning of the list
-            elif game == game2:
-                results.insert(1, result)  # Insert result2 after result1
-            else:
-                results.insert(2, result)  # Insert result3 after result2
-        game_summary(results)
-    else:
-        print("Ok, let's play another time.")
-        exit()
+    while True:
+        print("Welcome to this Madlibs game")
+        play = input("Let's play, shall we? 'yes'/'no' \n")
+        if play.lower() == "yes":
+            print("Alright, let's see what these small madlibs can create! \n")
+            results = []
+            games = [game1, game2, game3]
+            random.shuffle(games)
+            for game in games:
+                result = game()
+                if game == game1:
+                    results.insert(0, result)  # Insert result1 at the beginning of the list
+                elif game == game2:
+                    results.insert(1, result)  # Insert result2 after result1
+                else:
+                    results.insert(2, result)  # Insert result3 after result2
+            game_summary(results)
+            break  # Exit the loop after playing the game
+        elif play.lower() == "no":
+            print("Ok, let's play another time.")
+            break  # Exit the loop without playing the game
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")
 
 # First madlibs
 def game1():
@@ -57,9 +61,11 @@ def game3():
     return result3
 
 def game_summary(results):
-    print("\nGood Job, let's put them in the right order: \n")
+    print("Good Job, let's put them together in the right order: \n")
     # Print the results
     for result in results:
         print(result)
+
+
 
 play_game()
