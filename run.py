@@ -2,7 +2,7 @@ import random
 
 def play_game():
     while True:
-        print("Welcome to this Madlibs game")
+        print("Welcome to this Madlibs game! You'll play small madlibs that will turn into one funny story.")
         play = input("Let's play, shall we? 'yes'/'no' \n")
         if play.lower() == "yes":
             print("Alright, let's see what these small madlibs can create! \n")
@@ -25,38 +25,37 @@ def play_game():
         else:
             print("Invalid input. Please enter 'yes' or 'no'.")
 
-# First madlibs
+# First inputs for the user 
 def game1():
-    # First inputs for the user 
-    a = input("Enter your name: ")
-    b = input("Enter a friend's name: ")
-    c = input("Enter a number: ")
+    month = input("Enter a month: ")
+    name1 = input("Enter your name: ")
+    name2 = input("Enter another name: ")
+    pizza_topping = input("Enter a pizza topping: ")
 
     # The first story with the inputs
-    result1 = "One summer day in June, " + a + " surprised " + b + " with " + c + " puppies.\n"
+    result1 = "A sunny day in " + month + " there was a pizza party coming up. " + name1 + " and " + name2 + " was hosting the party but they forgot to buy " + pizza_topping + ".\n"
     print(result1)
     return result1
 
 # Second madlibs
 def game2():
     # Second inputs for user
-    d = input("Enter a location: ")
-    e = input("Enter a pet name: ")
-    f = input("Enter a dish: ")
+    name3 = input("Enter a friends name: ")
+    store_name = input("Enter a store name: ")
+    fruit = input("Enter a fruit: ")
 
     # The second story with inputs
-    result2 = "Take a trip to " + d + " with your favorite " + e + " and enjoy a wonderful " + f + ". \n"
+    result2 = "They texted " + name3 + " to buy it on the way. " + name3 + " popped by " + store_name + " and bought the " + fruit + " before heading to the party.\n"
     print(result2)
     return result2
 
 # Third madlibs
 def game3():
     #Third inputs for user
-    g = input("Enter a feeling: ")
-    h = input("Enter a place: ")
-    i = input("Enter a vegetable: ")
+    positive_feeling = input("Enter a positive feeling: ")
+    artist = input("Enter an artist: ")
 
-    result3 = "It makes me " + g + " to be out in " + h + " and pick " + i + ". \n"
+    result3 = "Realising the funny mix up because of autocorrect they all enjoyed the party without the topping. Everyone was " + positive_feeling + " and dancing to " + artist + "!\n"
     print(result3)
     return result3
 
