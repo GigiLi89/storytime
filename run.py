@@ -1,28 +1,65 @@
+import random
 
-# Welcome message and request to play for user
-print("Welcome to this Madlibs game!")
+def play_game():
+    print("Welcome to this Madlibs game")
+    play = input("Let's play, shall we? yes/no \n")
+    if play.lower() == "yes":
+        print("Alright, let's get started! \n")
+        results = []
+        games = [game1, game2, game3]
+        random.shuffle(games)
+        for game in games:
+            result = game()
+            if game == game1:
+                results.insert(0, result)  # Insert result1 at the beginning of the list
+            elif game == game2:
+                results.insert(1, result)  # Insert result2 after result1
+            else:
+                results.insert(2, result)  # Insert result3 after result2
+        game_summary(results)
+    else:
+        print("Ok, let's play another time.")
+        exit()
 
-play = input("Lets play, shall we? yes/no \n")
-procees="yes" or "no"
-if play == "yes":
-    print("Alright, let's get started! \n")
-else:
-    print("Ok, lets play another time.")
-    exit()
+# First madlibs
+def game1():
+    # First inputs for the user 
+    a = input("Enter your name: ")
+    b = input("Enter a friend's name: ")
+    c = input("Enter a number: ")
 
-# Inputs for the user 
-a = input("Enter your name: ")
-b = input("Enter a friends name: ")
-c = input("Enter a number: ")
+    # The first story with the inputs
+    result1 = "One summer day in June, " + a + " surprised " + b + " with " + c + " puppies.\n"
+    print(result1)
+    return result1
 
-# The story with the inputs
-print("One summer day in June, " + a + " surprised " + b + " with " + c + " puppies.\n")
+# Second madlibs
+def game2():
+    # Second inputs for user
+    d = input("Enter a location: ")
+    e = input("Enter a pet name: ")
+    f = input("Enter a dish: ")
 
-play_again = input("Would you like to play another Madlibs game? yes/no \n")
-process_again="yes" or "no"
-if play_again == "yes":
-    print("Woho, let's do this! \n")
-else:
-    print("Alright, thanks for playing!")
-    exit()
+    # The second story with inputs
+    result2 = "Take a trip to " + d + " with your favorite " + e + " and enjoy a wonderful " + f + ". \n"
+    print(result2)
+    return result2
 
+# Third madlibs
+def game3():
+    #Third inputs for user
+    g = input("Enter a feeling: ")
+    h = input("Enter a place: ")
+    i = input("Enter a vegetable: ")
+
+    result3 = "It makes me " + g + " to be out in " + h + " and pick " + i + ". \n"
+    print(result3)
+    return result3
+
+def game_summary(results):
+    print("\nGood Job, let's put them in the right order: \n")
+    # Print the results
+    for result in results:
+        print(result)
+
+play_game()
