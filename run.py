@@ -1,11 +1,12 @@
 import random
 
+
 def play_game():
     """
-    Function to manage the game
+    Function to manage the game.
     """
     while True:
-        print("Welcome to this Madlibs game! You'll play small madlibs that will turn into one funny story.")
+        print("Welcome to this Madlibs game!")
         play = input("Let's play, shall we? 'yes'/'no' \n")
         if play.lower() == "yes":
             print("Alright, let's see what these small madlibs can create! \n")
@@ -15,11 +16,11 @@ def play_game():
             for game in games:
                 result = game()
                 if game == game1:
-                    results.insert(0, result)  # First on the summarized result list
+                    results.insert(0, result)  # First on the sum result list
                 elif game == game2:
-                    results.insert(1, result)  # Second on the summarized result list
+                    results.insert(1, result)  # Second on the sum result list
                 else:
-                    results.insert(2, result)  # Third on the summarized result list
+                    results.insert(2, result)  # Third on the sum result list
             game_summary(results)
             break  # Exit the loop after playing the game
         elif play.lower() == "no":
@@ -28,10 +29,10 @@ def play_game():
         else:
             print("Invalid input. Please enter 'yes' or 'no'.")
 
-# First inputs for the user 
+
 def game1():
     """
-    Function to create the first madlibs story with the users input
+    Function to create the first madlibs story with the user's input.
     """
     month = input("Enter a month: ")
     name1 = input("Enter your name: ")
@@ -39,47 +40,61 @@ def game1():
     pizza_topping = input("Enter a pizza topping: ")
 
     # The first story with the inputs
-    result1 = "A sunny day in " + month + " there was a pizza party coming up. " + name1 + " and " + name2 + " was hosting the party but they forgot to buy " + pizza_topping + ".\n"
+    result1 = (
+        "A sunny day in " + month + " there was a pizza party coming up. "
+        + name1 + " and " + name2 + " was hosting the party but "
+        "they forgot to buy " + pizza_topping + ".\n"
+    )
     print(result1)
     return result1
 
-# Second madlibs
+
 def game2():
     """
-    Function to create the second madlibs story with the users input
+    Function to create the second madlibs story with the user's input.
     """
-    # Second inputs for user
-    name3 = input("Enter a friends name: ")
+    # Second inputs for the user
+    name3 = input("Enter a friend's name: ")
     store_name = input("Enter a store name: ")
     fruit = input("Enter a fruit: ")
 
     # The second story with inputs
-    result2 = "They texted " + name3 + " to buy it on the way. " + name3 + " popped by " + store_name + " and bought the " + fruit + " before heading to the party.\n"
+    result2 = (
+        "They texted " + name3 + " to buy it on the way. "
+        + name3 + " popped by " + store_name + " and bought the "
+        + fruit + " before heading to the party.\n"
+    )
     print(result2)
     return result2
 
-# Third madlibs
+
 def game3():
     """
-    Function to create the third madlibs story with the users input
+    Function to create the third madlibs story with the user's input.
     """
-    #Third inputs for user
+    # Third inputs for the user
     positive_feeling = input("Enter a positive feeling: ")
     artist = input("Enter an artist: ")
 
-    result3 = "Realising the funny mix up because of autocorrect they all enjoyed the party without the topping. Everyone was " + positive_feeling + " and dancing to " + artist + "!\n"
+    # The third story with inputs
+    result3 = (
+        "Realising the funny mix up because of "
+        "autocorrect they all enjoyed the party without the topping."
+        " Everyone was " + positive_feeling +
+        " and dancing to " + artist + "!\n"
+    )
     print(result3)
     return result3
 
+
 def game_summary(results):
     """
-    Function to summarize all madlibs results 
+    Function to summarize all madlibs results.
     """
     print("Good Job, let's put them together in the right order: \n")
     # Print the results
     for result in results:
         print(result)
-
 
 
 play_game()
