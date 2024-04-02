@@ -1,6 +1,5 @@
 import random
 
-
 def play_game():
     """
     Function to manage the game.
@@ -22,13 +21,22 @@ def play_game():
                 else:
                     results.insert(2, result)  # Third on the sum result list
             game_summary(results)
-            break  # Exit the loop after playing the game
         elif play.lower() == "no":
             print("Ok, let's play another time.")
             break  # Exit the loop without playing the game
         else:
             print("Invalid input. Please enter 'yes' or 'no'.")
+            continue
 
+        while True:
+            play_again = input("Do you want to play again? 'yes'/'no' \n")
+            if play_again.lower() == "yes":
+                break
+            elif play_again.lower() == "no":
+                print("Ok, see you next time!!")
+                return
+            else:
+                print("Invalid input. Please enter 'yes' or 'no'.")
 
 def game1():
     """
@@ -48,7 +56,6 @@ def game1():
     print(result1)
     return result1
 
-
 def game2():
     """
     Function to create the second madlibs story with the user's input.
@@ -66,7 +73,6 @@ def game2():
     )
     print(result2)
     return result2
-
 
 def game3():
     """
@@ -86,7 +92,6 @@ def game3():
     print(result3)
     return result3
 
-
 def game_summary(results):
     """
     Function to summarize all madlibs results.
@@ -95,6 +100,5 @@ def game_summary(results):
     # Print the results
     for result in results:
         print(result)
-
 
 play_game()
