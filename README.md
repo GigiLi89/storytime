@@ -2,9 +2,8 @@
 
 This madlibs game is a Python terminal game and runs in the Code Insistute mock terminal on Heroku.
 
-LINK TO LIVE VERSION OF THE PROJECT
-IMAGE OF RESPONSIVE APP
-
+Link to deployed app: https://gigis-storytime-30d20dff6c88.herokuapp.com/
+![AmIResponsive](assets/images/responsiv.png)
 
 ## How to play Madlibs Game
 
