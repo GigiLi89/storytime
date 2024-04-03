@@ -74,8 +74,15 @@ I have done all manual testing to make sure the game runs as it should. From the
     - Something other than yes or no: an invalid error message will show and the user will have to answer again. 
 
 ## Remaining bugs
-- No bugs 
+- No bugs remaining in the code, the functions works as they should.
 
 ## Deployment
 
-## Credits
+## Credits, sorces and resources
+- CI Python Linter: https://pep8ci.herokuapp.com/
+- Code Instisutes Love Sandwiches Walkthrough Project
+- Python tutotial: https://www.youtube.com/watch?v=rfscVS0vtbw
+- Github, Gitpod and Heroku
+
+## Acknowlegde
+- Thanks to the Slack Community for always keeping the spirits up.
