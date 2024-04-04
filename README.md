@@ -3,11 +3,13 @@
 This madlibs game is a Python terminal game and runs in the Code Insistute mock terminal on Heroku.
 
 Link to deployed app: https://gigis-storytime-30d20dff6c88.herokuapp.com/
+Link to the GitHub Repository: https://github.com/GigiLi89/storytime/deployments/gigis-storytime
+
 ![AmIResponsive](assets/images/responsiv.png)
 
 ## How to play Madlibs Game
 
-The game will be shown in different sections in a random order and build a sentence after ech section. Follow the instructions by entering what is requested. 
+The game will be shown in different sections in a random order and build a sentence after ech section. The inputs can only be answered in alpha charachters, if number is added an error message will appear asking the user to input again with alpha characters. Follow the instructions by entering what is requested. 
 
 At the end of the game all sentences will be summarized together in the right order and you will be able to read the whole story with your own inputs. 
 
@@ -24,6 +26,10 @@ If user answers no, there will be a message saying: Ok, lets play another time:
 If user answers with something else other than "yes" or "no" an error message will show:
 
 ![Invalid answer](assets/images/invalid.png)
+
+The user can only put alpha characters, no numbers. If numbers is written in the input the user will be asked to enter alphabetical charachters:
+
+"[Alphabetical charachters](assets/images/alpha.png)
 
 If user answers yes, the game will begin. Presented in a random order three different sections will be presented, one after another. Asking the user to input the information asked. After each section the madlib story will be shown as well as the new section of game. 
 
@@ -76,6 +82,16 @@ I have done all manual testing to make sure the game runs as it should. From the
 - No bugs remaining in the code, the functions works as they should.
 
 ## Deployment
+Link to deployed app: https://gigis-storytime-30d20dff6c88.herokuapp.com/
+
+This projext was deployed by using the mock terminal for Heroku through Code Institute.
+
+- Create new Heroku app
+- Added to improve compatibility with varies Python Libraries: 
+    - Config vars: set key to PORT and value to 8000
+- Set the buildpacks to (1)Python and then (2) NodeJS as well.
+- Deplyment method: Github
+- Deploy branch
 
 ## Credits, sorces and resources
 - CI Python Linter: https://pep8ci.herokuapp.com/
@@ -86,3 +102,5 @@ I have done all manual testing to make sure the game runs as it should. From the
 
 ## Acknowlegde
 - Thanks to the Slack Community for always keeping the spirits up.
+- To my mentor Sheryl who is always coming with good input and encouragement.
+- To Code Institute who's been helping me, early morning and late evening, with throughout this project with anything from setting up heroku to error messages that I've not understood myself. 
