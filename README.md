@@ -62,6 +62,17 @@ If invalid (user puts something else than "yes" or "no", an error message will b
 
 The diffrence between the flowchart I made at the planning phase of my project and during the building of the project is the "Do you want to play again?" - function added to the end. 
 
+## User Story
+### First time visitors
+- Wants to play a game
+- Wants a funny story
+- Wants to find out what the story is
+
+### Returning visitors
+- Wants to play the game again
+- Wants to show someone else and play
+- Wants to see if there's any new stories
+
 ## Data Model
 
 I have choosen to use the functions as a form of data model. I have the mini games which are representing different scenarios which will also take the inputs from users.
@@ -99,6 +110,7 @@ This projext was deployed by using the mock terminal for Heroku through Code Ins
 - Python tutotial: https://www.youtube.com/watch?v=rfscVS0vtbw
 - Github, Gitpod and Heroku
 - ascii_letters: https://www.geeksforgeeks.org/python-string-ascii_letters/
+- ANSI code to print color: https://www.studytonight.com/python-howtos/how-to-print-colored-text-in-python and https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
 
 ## Acknowlegde
 - Thanks to the Slack Community for always keeping the spirits up.

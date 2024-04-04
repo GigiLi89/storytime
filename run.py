@@ -14,8 +14,9 @@ def play_game():
     Function to manage the game.
     """
     while True:
-        print("Welcome to this Madlibs game!")
-        play = input("Let's play, shall we? 'yes'/'no' \n")
+        print("\033[95mWelcome to this Madlibs game!\033[0m")
+        play = input("\033[95mLet's play, shall we? 'yes'/'no' \033[0m\n")
+
         if play.lower() == "yes":
             print("Alright, let's see what these small madlibs can create! \n")
             results = []
@@ -122,7 +123,7 @@ def game_summary(results):
     """
     Function to summarize all madlibs results.
     """
-    print("Good Job, let's put them together in the right order: \n")
+    print("\033[95mLet's put them together in the right order: \n\033[0m")
     # Print the results
     for result in results:
         print(result)
