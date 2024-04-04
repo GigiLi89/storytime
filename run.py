@@ -14,7 +14,7 @@ def play_game():
     Function to manage the game.
     """
     while True:
-        print("\033[95mWelcome to this Madlibs game!\033[0m")
+        print("\033[95mWelcome to this Madlibs game coded by Gigi!\033[0m\n")
         play = input("\033[95mLet's play, shall we? 'yes'/'no' \033[0m\n")
 
         if play.lower() == "yes":

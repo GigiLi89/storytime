@@ -3,6 +3,7 @@
 This madlibs game is a Python terminal game and runs in the Code Insistute mock terminal on Heroku.
 
 Link to deployed app: https://gigis-storytime-30d20dff6c88.herokuapp.com/
+
 Link to the GitHub Repository: https://github.com/GigiLi89/storytime/deployments/gigis-storytime
 
 ![AmIResponsive](assets/images/responsiv.png)
