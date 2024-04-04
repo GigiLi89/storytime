@@ -1,11 +1,13 @@
 import random
 import string
 
+
 def is_alpha(s):
     """
     Function to check if a string contains only alphabetic characters.
     """
     return all(char in string.ascii_letters for char in s)
+
 
 def play_game():
     """
@@ -46,6 +48,7 @@ def play_game():
             else:
                 print("Invalid input. Please enter 'yes' or 'no'.")
 
+
 def get_input(prompt):
     """
     Function to get input from user and ensure it's alphabetic.
@@ -56,6 +59,7 @@ def get_input(prompt):
             return user_input
         else:
             print("Please enter alphabetic characters only.")
+
 
 def game1():
     """
@@ -75,6 +79,7 @@ def game1():
     print(result1)
     return result1
 
+
 def game2():
     """
     Function to create the second madlibs story with the user's input.
@@ -92,6 +97,7 @@ def game2():
     )
     print(result2)
     return result2
+
 
 def game3():
     """
@@ -111,6 +117,7 @@ def game3():
     print(result3)
     return result3
 
+
 def game_summary(results):
     """
     Function to summarize all madlibs results.
@@ -119,5 +126,6 @@ def game_summary(results):
     # Print the results
     for result in results:
         print(result)
+
 
 play_game()
