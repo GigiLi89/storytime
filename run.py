@@ -1,5 +1,11 @@
 import random
+import string
 
+def is_alpha(s):
+    """
+    Function to check if a string contains only alphabetic characters.
+    """
+    return all(char in string.ascii_letters for char in s)
 
 def play_game():
     """
@@ -40,15 +46,25 @@ def play_game():
             else:
                 print("Invalid input. Please enter 'yes' or 'no'.")
 
+def get_input(prompt):
+    """
+    Function to get input from user and ensure it's alphabetic.
+    """
+    while True:
+        user_input = input(prompt)
+        if is_alpha(user_input):
+            return user_input
+        else:
+            print("Please enter alphabetic characters only.")
 
 def game1():
     """
     Function to create the first madlibs story with the user's input.
     """
-    month = input("Enter a month: ")
-    name1 = input("Enter your name: ")
-    name2 = input("Enter another name: ")
-    pizza_topping = input("Enter a pizza topping: ")
+    month = get_input("Enter a month: ")
+    name1 = get_input("Enter your name: ")
+    name2 = get_input("Enter another name: ")
+    pizza_topping = get_input("Enter a pizza topping: ")
 
     # The first story with the inputs
     result1 = (
@@ -59,15 +75,14 @@ def game1():
     print(result1)
     return result1
 
-
 def game2():
     """
     Function to create the second madlibs story with the user's input.
     """
     # Second inputs for the user
-    name3 = input("Enter a friend's name: ")
-    store_name = input("Enter a store name: ")
-    fruit = input("Enter a fruit: ")
+    name3 = get_input("Enter a friend's name: ")
+    store_name = get_input("Enter a store name: ")
+    fruit = get_input("Enter a fruit: ")
 
     # The second story with inputs
     result2 = (
@@ -78,14 +93,13 @@ def game2():
     print(result2)
     return result2
 
-
 def game3():
     """
     Function to create the third madlibs story with the user's input.
     """
     # Third inputs for the user
-    positive_feeling = input("Enter a positive feeling: ")
-    artist = input("Enter an artist: ")
+    positive_feeling = get_input("Enter a positive feeling: ")
+    artist = get_input("Enter an artist: ")
 
     # The third story with inputs
     result3 = (
@@ -97,7 +111,6 @@ def game3():
     print(result3)
     return result3
 
-
 def game_summary(results):
     """
     Function to summarize all madlibs results.
@@ -106,6 +119,5 @@ def game_summary(results):
     # Print the results
     for result in results:
         print(result)
-
 
 play_game()

@@ -82,6 +82,7 @@ I have done all manual testing to make sure the game runs as it should. From the
 - Code Instisutes Love Sandwiches Walkthrough Project
 - Python tutotial: https://www.youtube.com/watch?v=rfscVS0vtbw
 - Github, Gitpod and Heroku
+- ascii_letters: https://www.geeksforgeeks.org/python-string-ascii_letters/
 
 ## Acknowlegde
 - Thanks to the Slack Community for always keeping the spirits up.
